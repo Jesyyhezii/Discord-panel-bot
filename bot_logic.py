@@ -52,7 +52,7 @@ def generate_reply(prompt, prompt_language, use_google_ai, google_api_keys, queu
         else:
             ai_prompt = f"Reply to the following message in English: '{prompt}'. Make the reply a single, casual sentence like a human would say."
 
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={google_api_key}"
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={google_api_key}"
         headers = {"Content-Type": "application/json"}
         data = {"contents": [{"parts": [{"text": ai_prompt}]}]}
 
